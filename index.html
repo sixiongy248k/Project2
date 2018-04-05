@@ -5,19 +5,20 @@
 <link rel="stylesheet" href="css/game.css">
 
 <body>
-    <audio id="audio" src="https://freemusicarchive.org/music/download/faf030f13f3f018b3c7da5eb1dca63f1297e21e7" autostart="false" ></audio>
+
 
     <div class="instruct1">
       <h1>Pixel Quest</h1>
       <hr class="styled"></hr>
       <p>Music</p>
-
+      <audio id="audio" src="http://soundimage.org/wp-content/uploads/2016/06/8-Bit-Mayhem.mp3" autostart="true" ></audio>
       <button onclick="PlaySound()" type="button" class="styledbtn">Play</button>
       <button onclick="StopSound()" type="button" class="styledbtn">Pause</button>
 
     </div>
     <div id="c1"></div>
     <div class="instruct2"></div>
+
     <script>
       runGame(GAME_LEVELS, DOMDisplay);
 
