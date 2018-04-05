@@ -11,7 +11,7 @@
       <h1>Pixel Quest</h1>
       <hr class="styled"></hr>
       <p>Music</p>
-      <audio id="audio" src="http://soundimage.org/wp-content/uploads/2016/06/8-Bit-Mayhem.mp3" autostart="true" ></audio>
+      <audio id="audio" loop src="http://soundimage.org/wp-content/uploads/2016/06/8-Bit-Mayhem.mp3" autostart="true" ></audio>
       <button onclick="PlaySound()" type="button" class="styledbtn">Play</button>
       <button onclick="StopSound()" type="button" class="styledbtn">Pause</button>
 
@@ -21,7 +21,6 @@
 
     <script>
       runGame(GAME_LEVELS, DOMDisplay);
-
       function PlaySound() {
         var sound = document.getElementById("audio");
         sound.play();
