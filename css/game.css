@@ -1,0 +1,180 @@
+body {
+  background: url("https://t4.ftcdn.net/jpg/01/32/50/45/240_F_132504556_5IPIR4F4kS4Z0Dw4H99ff4VYfs65m8fh.jpg");
+  font-family: "Segoe UI",Helvetica,sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 20px;
+  margin: auto;
+  font-weight: bold;
+}
+.styled {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, #FFB164, #000, #FFB164);
+}
+
+.styledbtn {
+  font-size: 15px;
+  padding: 10px 10px;
+  margin: auto;
+  background-color: Transparent;
+  outline:none;
+  border: none;
+}
+.styledbtn:hover {
+  border: 2px solid #fff;
+  font-size: 18px;
+  box-shadow: 0 5px 16px 0 rgba(0,0,0,0.35), 0 10px 25px 0 rgba(0,0,0,0.15);
+}
+
+.background    { table-layout: fixed;
+                 background: url("https://www.pixelstalk.net/wp-content/uploads/2016/07/8-Bit-Backgrounds-HD-1.png");
+                 background-size: contain;
+                 border-spacing: 0;   }
+.background td { padding: 0;}
+.lava          { background: url("https://i.pinimg.com/originals/f1/49/d7/f149d75b54049fb56a2fc297c2ef3101.gif");
+                 background-size: contain;}
+.wall          { background-color: brown;
+                 background: url("../Images/wall.jpg");
+                 background-position: center;}
+
+.actor  { position: absolute;  }
+.player { background: url("../Images/char1.gif");
+          background-size: contain);
+          background-repeat: no-repeat;
+          border-radius: 50px;}
+.coin   { border-radius: 50px;
+          background: Transparent;
+          background-image: url("https://i.gjcdn.net/data/fireside/posts/2/138/179138/media/coin-y7ikrgti.gif");
+          background-size: contain;}
+.spike  {
+  border-style: solid;
+  border-width: 6px 3px 0 3px;
+  border-color: #5e6369 transparent transparent transparent;
+ }
+ .portal {
+   background-color: purple;
+   background: url("../Images/portal.gif");
+   background-size: contain;
+ }
+
+ .lost .player {
+   background: rgb(160, 64, 64);
+ }
+ .won .player {
+   box-shadow: 0px 0px 7px #de5112;
+ }
+
+
+.game {
+  float: left;
+  overflow: hidden;
+  max-width: 600px;
+  max-height: 450px;
+  position: relative;
+  margin: auto;
+  margin-top: 200px;
+  border: 1px solid #000;
+  text-align: center;
+}
+
+.instruct1 {
+
+  text-align: center;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  margin-top: 200px;
+  margin-left: 450px;
+  border: 1px solid #000;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  height: 450px;
+  width: 180px;
+  background: url("../Images/instruct1.jpg");
+}
+
+
+.instruct2 {
+  text-align: center;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  margin-top: 200px;
+  border: 1px solid #000;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  height: 450px;
+  width: 180px;
+  background: url("../Images/instruct2.jpg");
+}
+@media only screen and (max-width: 1550px) {
+  h1 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .instruct1{
+    margin-left: 50px;
+    width: 120px;
+    background: url("../Images/instruct1a.jpg");
+  }
+  .instruct2{
+    width: 120px;
+    background: url("../Images/instruct2a.jpg");
+  }
+  .styledbtn {
+    font-size: 13px;
+  }
+  .styledbtn:hover{
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  h1 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 13px;
+  }
+  .styledbtn {
+    font-size: 10px;
+  }
+  .styledbtn:hover{
+    font-size: 12px;
+  }
+  .instruct1 {
+    text-align: center;
+    margin-left: 0px;
+    float:none;
+    height: 100px;
+    width: 600px;
+    background: url("../Images/instruct1b.jpg");
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px;
+  }
+  .game {
+    float: none;
+    margin: 0;
+  }
+  .instruct2 {
+    float: none;
+    margin-left: 0;
+    margin-top: 0;
+    height: 100px;
+    width: 600px;
+    background: url("../Images/instruct2b.jpg");
+
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}

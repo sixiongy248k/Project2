@@ -1,0 +1,42 @@
+<!doctype html>
+<script src="code/game.js"></script>
+<script src="code/game_levels.js"></script>
+
+<link rel="stylesheet" href="css/game.css">
+
+<body>
+    <audio id="audio" src="https://freemusicarchive.org/music/download/faf030f13f3f018b3c7da5eb1dca63f1297e21e7" autostart="false" ></audio>
+
+    <div class="instruct1">
+      <h1>Pixel Quest</h1>
+      <hr class="styled"></hr>
+      <p>Music</p>
+
+      <button onclick="PlaySound()" type="button" class="styledbtn">Play</button>
+      <button onclick="StopSound()" type="button" class="styledbtn">Pause</button>
+
+    </div>
+    <div id="c1"></div>
+    <div class="instruct2"></div>
+    <script>
+      runGame(GAME_LEVELS, DOMDisplay);
+
+      function PlaySound() {
+        var sound = document.getElementById("audio");
+        sound.play();
+      }
+      function StopSound() {
+        var sound = document.getElementById("audio");
+        sound.pause();
+      }
+
+      document.addEventListener('keydown', function(e){ // reset game
+        //if(e.keyCode == 82){
+        //  startLevel(n);
+        //  document.getElementByClassName("game ").innerHTML = "";
+        //}
+        if(e.keyCode == 82)
+          window.location.reload();
+      })
+    </script>
+</body>
