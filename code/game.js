@@ -350,6 +350,7 @@ Player.prototype.moveX = function(step, level, keys) {
   //  this.pos = newPos;
   if(obstacle == "portal"){ //Teleport you randomly????
     this.pos = new Vector((((Math.random()*10)+2)*.8), (((Math.random()*10)+2)*.2));}
+
 };
 
 var gravity = 24;
@@ -376,6 +377,7 @@ Player.prototype.moveY = function(step, level, keys) {
   if(obstacle == "portal"){ //Teleport you randomly????
     this.pos = new Vector((((Math.random()*10)+2)*.7), (((Math.random()*10)+2)*.3));}
   //  console.log("Spike!!!! resetting spawn....");  }
+
 };
 
 Player.prototype.act = function(step, level, keys) {
@@ -388,19 +390,23 @@ Player.prototype.act = function(step, level, keys) {
 
   // Losing animation(dying)
   if (level.status == "lost") {
-    this.pos.y += step*10;
-    this.size.y -= step*10;
+    this.pos.y += step*4;
+    this.size.y -= step*4;
   }
 };
+
 
 Level.prototype.playerTouched = function(type, actor) {
   // if the player touches lava and the player hasn't won
   // Player loses
+
+
   if (type == "lava" && this.status == null) {
     this.status = "lost";
     this.finishDelay = 1;
   }
   else if (type == "coin") {
+    
     this.actors = this.actors.filter(function(other) {
       return other != actor;
     });
@@ -418,7 +424,7 @@ Level.prototype.playerTouched = function(type, actor) {
       return other != actor;
     });
     this.status = "lost";
-    this.finishDelay = .1; //really quick death
+    this.finishDelay = .2; //really quick death
   }
 
 };

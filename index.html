@@ -11,7 +11,8 @@
       <h1>Pixel Quest</h1>
       <hr class="styled"></hr>
       <p>Music</p>
-      <audio id="audio" loop src="http://soundimage.org/wp-content/uploads/2016/06/8-Bit-Mayhem.mp3" autostart="true" ></audio>
+      <audio id="audio" loop autoplay src="http://soundimage.org/wp-content/uploads/2016/06/8-Bit-Mayhem.mp3"></audio>
+      <audio id="audio2" src="../Project2/Sounds/404793__owlstorm__retro-video-game-sfx-jump.wav"></audio>
       <button onclick="PlaySound()" type="button" class="styledbtn">Play</button>
       <button onclick="StopSound()" type="button" class="styledbtn">Pause</button>
 
@@ -21,20 +22,28 @@
 
     <script>
       runGame(GAME_LEVELS, DOMDisplay);
+
+      var sound = document.getElementById("audio");
+      var jsound = document.getElementById('audio2');
+      sound.volume = .55;
+      jsound.volume = .7;
+
       function PlaySound() {
-        var sound = document.getElementById("audio");
         sound.play();
       }
       function StopSound() {
-        var sound = document.getElementById("audio");
         sound.pause();
       }
+
 
       document.addEventListener('keydown', function(e){ // reset game
         //if(e.keyCode == 82){
         //  startLevel(n);
         //  document.getElementByClassName("game ").innerHTML = "";
         //}
+        if(e.keyCode == 38){
+          jsound.play();
+        }
         if(e.keyCode == 82)
           window.location.reload();
       })

@@ -27,14 +27,15 @@ p {
   border: none;
 }
 .styledbtn:hover {
+  color: #fff;
   border: 2px solid #fff;
-  font-size: 18px;
+  font-size: 17px;
   box-shadow: 0 5px 16px 0 rgba(0,0,0,0.35), 0 10px 25px 0 rgba(0,0,0,0.15);
 }
 
 .background    { table-layout: fixed;
                  background: url("https://www.pixelstalk.net/wp-content/uploads/2016/07/8-Bit-Backgrounds-HD-1.png");
-                 background-size: contain;
+                 background-size: cover;
                  border-spacing: 0;   }
 .background td { padding: 0;}
 .lava          { background: url("https://i.pinimg.com/originals/f1/49/d7/f149d75b54049fb56a2fc297c2ef3101.gif");
@@ -45,7 +46,7 @@ p {
 
 .actor  { position: absolute;  }
 .player { background: url("../Images/char1.gif");
-          background-size: contain);
+          background-size: contain;
           background-repeat: no-repeat;
           border-radius: 50px;}
 .coin   { border-radius: 50px;
@@ -65,9 +66,15 @@ p {
 
  .lost .player {
    background: rgb(160, 64, 64);
+   transform: scale(.4);
  }
  .won .player {
+   background: url("../Images/char2.gif");
+   background-size: contain;
+   background-repeat: no-repeat;
    box-shadow: 0px 0px 7px #de5112;
+   filter: invert(100%);
+   transform: scale(2);
  }
 
 
